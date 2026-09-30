@@ -9,7 +9,6 @@
   --spacings--mobile--mobile-font-size: 1rem;
   --spacings--main: 4.167vw;
   --spacings--mobile--mobile-2s: 2rem;
-  --border-radius--s: 4px;
   --spacings--2s: 1.25vw;
   --spacings--xs: 0.417vw;
   --spacings--mobile--mobile-xs: 0.5rem;
@@ -24,6 +23,8 @@
   --spacings--l: 5vw;
   --spacings--mobile--mobile-l: 6rem;
   --sentec-main: #000aff;
+  --border-radius--s: 4px;
+  --border-radius--2s: 1.8vw;
   --border-radius--m: 3vw;
 }
 
@@ -59,6 +60,7 @@
 
   /* radius */
   --radius-s: var(--border-radius--s); /* 4px */
+  --radius-2s: var(--border-radius--2s); /* 1.5vw */
   --radius-m: var(--border-radius--m); /* 8px */
 }
 
@@ -79,4 +81,5 @@ body {
   width: 100%;
   scroll-behavior: smooth;
   font-size: var(--font-size);
+  overflow: hidden;
 }

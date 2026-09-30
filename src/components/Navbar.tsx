@@ -2,34 +2,24 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { cn } from "@/utils/utils";
+import { useState } from "react";
 import { motion } from "motion/react";
 
 export default function Navbar() {
   const [isHovered, setIsHovered] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
   return (
     <header
-      className={cn(
-        "w-full h-(--spacings--main) fixed top-m z-50 text-white px-ml flex justify-between items-center",
-      )}>
+      className={
+        "w-full h-main fixed top-m z-50 text-white px-ml flex justify-between items-center"
+      }>
       <div
-        className={cn(
-          "flex items-center gap-l px-2s h-full w-fit rounded-m transition-all duration-300 ease-in-out",
-          scrolled ? "backdrop-blur-sm bg-black/50" : "bg-transparent",
-        )}>
+        className={
+          "flex items-center gap-l px-2s h-full w-fit rounded-m transition-all duration-300 ease-in-out backdrop-blur-sm bg-white/80"
+        }>
         <Link href="/" className="relative h-full w-[14vw]">
-          <Image src="/logo.svg" alt="logo" fill objectFit="contain" />
+          <Image src="/vbs.webp" alt="logo" fill objectFit="contain" />
         </Link>
-        <ul className="flex items-center gap-m">
+        <ul className="flex items-center gap-m text-blue-950 font-semibold">
           <li>
             <Link href="/about">About</Link>
           </li>
